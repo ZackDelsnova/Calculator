@@ -8,29 +8,32 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <div class="header">
-        <h1 class="title">Calculator</h1>
-    </div>
 
     <div class="calculator">
-        <div class="display">00</div>
+        <h1 class="title">Calculator</h1>
+        <div class="display">
+            <div class="calculation" id="calculation"></div>
+            <div class="result" id="result"></div>
+        </div>
         <div class="buttons">
-            <button class="clear">AC</button>
-            <button>÷</button>
-            <button>×</button>
-            <button>-</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-             <button class="add">+</button>
-            <button>4</button>
-            <button>5</button>
-             <button>6</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>0</button>
-            <button>=</button>
+            <button class="clear" onclick="clearCalculator()">AC</button>
+            <button onclick="appendOperator('÷')">÷</button>
+            <button onclick="appendOperator('×')">×</button>
+            <button class="backspace" onclick="deleteLast()">⌫</button>
+            <button onclick="appendNumber(7)">7</button>
+            <button onclick="appendNumber(8)">8</button>
+            <button onclick="appendNumber(9)">9</button>
+            <button class="add" onclick="appendOperator('+')">+</button>
+            <button onclick="appendNumber(4)">4</button>
+            <button onclick="appendNumber(5)">5</button>
+            <button onclick="appendNumber(6)">6</button>
+            <button onclick="appendOperator('-')">-</button>
+            <button onclick="appendNumber(1)">1</button>
+            <button onclick="appendNumber(2)">2</button>
+            <button onclick="appendNumber(3)">3</button>
+            <button onclick="appendNumber(0)">0</button>
+            <button onclick="appendNumber('.')">.</button>
+            <button class="equal" onclick="calculate()">=</button>
         </div>
     </div>
 </body>
